@@ -1,0 +1,15 @@
+syntax = "proto3";
+package hakkochain.hakkochain;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "hakko-chain/x/hakkochain/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "hakkochain/x/hakkochain/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

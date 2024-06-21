@@ -1,0 +1,17 @@
+syntax = "proto3";
+package hakkochain.hakkochain;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "hakkochain/hakkochain/params.proto";
+
+option go_package = "hakko-chain/x/hakkochain/types";
+
+// GenesisState defines the hakkochain module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
